@@ -2,17 +2,21 @@ package Array;
 
 public class SecondElement {
     public static void main(String[] args) {
-        int[] arr = {10, 10, 10, 10,10,9};
+        int[] arr = {10, 10,12, 13,10, 11, 10,10,9};
         System.out.println(findSecondElement(arr));
     }
 
     static int findSecondElement(int[] arr) {
         int maxElement = findMaxElement(arr);
+        System.out.println(maxElement);
         int secondElement = -1;
         for (int j : arr) {
 
             if (maxElement > j) {
-                secondElement = j;
+                if(secondElement < j){
+                    secondElement = j;
+                }
+
             }
         }
 

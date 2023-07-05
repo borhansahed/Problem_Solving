@@ -1,6 +1,4 @@
 package Array;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Sort012 {
@@ -17,33 +15,26 @@ public class Sort012 {
 
         while(m <= e){
 
-            switch(a[m]){
-
-                case 0: {
+            switch (a[m]) {
+                case 0 -> {
                     int temp = a[m];
                     a[m] = a[s];
                     a[s] = temp;
                     m++;
                     s++;
-                    break;
                 }
-
-                case 1:{
+                case 1 -> {
                     m++;
-                    break;
                 }
-
-                case 2:{
+                case 2 -> {
                     int temp = a[m];
                     a[m] = a[e];
                     a[e] = temp;
 
                     e--;
-                    break;
                 }
-
-                default:
-                    break;
+                default -> {
+                }
             }
     }
 }
