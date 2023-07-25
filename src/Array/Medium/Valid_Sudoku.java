@@ -22,7 +22,7 @@ public class Valid_Sudoku {
 
     static boolean valid_sudoku(String[][] board) {
 
-        // T.C  -> O(81)  S.C -> O(n)
+        // T.C  -> O(81)  S.C -> O(n^3)
         HashSet<String> set = new HashSet<>();
 
         for (int i = 0; i < 9; i++) {
