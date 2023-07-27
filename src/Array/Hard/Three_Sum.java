@@ -13,7 +13,7 @@ public class Three_Sum {
 
     public static List<List<Integer>> threeSum(int[] nums) {
 
-
+       // T.C -> O(n*m) S.C -> O(uniquePair)
         List<List<Integer>> ans = new ArrayList<>();
 
         Arrays.sort(nums);
@@ -40,7 +40,7 @@ public class Three_Sum {
 
             }
         }
-        return ans.stream().distinct().toList();
+        return ans;
 
 
         /*
