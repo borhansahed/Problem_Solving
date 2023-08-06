@@ -41,7 +41,7 @@ public class Longest_Subsequence {
 
 
      /*
-     T.C -> O(n*logN)
+     T.C -> O(nLogn)
      S.C -> O(1)
 
        Arrays.sort(arr);
