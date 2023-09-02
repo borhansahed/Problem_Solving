@@ -3,9 +3,13 @@ package String;
 public class Valid_Anagram {
 
     public static void main(String[] args) {
-        String s = "Ana";
-        System.out.println(isAnagram("ab", "ba"));
-        System.out.println(s.substring(2+1));
+        System.out.println((int)'0');
+        String s = "sahed";
+
+        for(char ch: s.toCharArray()){
+
+        }
+
     }
 
     public static  boolean isAnagram(String s, String t) {
