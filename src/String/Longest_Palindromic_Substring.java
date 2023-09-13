@@ -1,6 +1,9 @@
 package String;
 
 public class Longest_Palindromic_Substring {
+
+  static   int resultStart;
+  static   int resultLength;
     public static void main(String[] args) {
         System.out.println(longestPalindrome("cbbd"));
     }
@@ -9,47 +12,29 @@ public class Longest_Palindromic_Substring {
 
         if(s.length() <= 1) return s;
 
-        if(isPalindrome(s)){
-            return s;
+        for(int i = 0; i<s.length()-1; i++){
+            expandRange(s, i, i);
+            expandRange(s, i, i+1);
         }
 
-        String ans = "";
-        for(int i = 0; i<s.length(); i++){
-            boolean left = isPalindrome(s.substring(0, s.length() -i-1));
-            boolean right = isPalindrome(s.substring(i));
 
-           if(left){
-               ans = s.substring(0, s.length() - i - 1);
-               break;
-           }
-           if(right){
-               ans = s.substring(i);
-               break;
-           }
-        }
 
-  return ans;
-
+      return s.substring(resultStart, resultStart+resultLength);
 
     }
 
-    public static boolean isPalindrome(String s){
+    public static void expandRange(String s, int start, int end){
 
-        if(s.length() <= 1)return false;
-
-        int i = 0;
-        int j = s.length() - 1;
-
-        while( i<j){
-            if(s.charAt(i) != s.charAt(j)){
-                return false;
-            }
-
-            i++;
-            j--;
+        while (start>=0 && end < s.length() && s.charAt(start) == s.charAt(end)){
+            start--;
+            end++;
         }
 
+        if(resultLength < end - start - 1){
 
-        return true;
+            resultStart = start + 1;
+            resultLength = end - start - 1;
+        }
+
     }
 }
