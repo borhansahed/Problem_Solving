@@ -4,6 +4,7 @@ public class Search_Rotate_Array {
     public static void main(String[] args) {
         int[] arr = {4,5,6,0,1,2,3};
         System.out.println(search(arr,0,arr.length-1, 0));
+
     }
 
     public  static int  search(int[]arr, int start, int end,  int target){
