@@ -18,7 +18,6 @@ public class Flips_Bit {
             x= ((a>>i) & 1);
             y= ((b>>i) & 1);
             z= ((c>>i) & 1);
-
             int cnt = x + y;
 
             if( z == 0)ans += cnt;
