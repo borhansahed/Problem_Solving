@@ -22,7 +22,7 @@ public class Main {
 //        System.out.println(map.hashCode());
 
         MyHashMap map = new MyHashMap();
-
+        System.out.println((int)1e7+7);
         System.out.println(map.size());
         map.put(1, 10);
         map.put(1, 10);
