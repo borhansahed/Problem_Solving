@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Count_Sort {
     public static void main(String[] args) {
 
-        int[] arr = {6,2,7,5,3,1,0,10,4,8,4};
+        int[] arr = {6,2,7,5,3,1,0,10,4,8,4,5};
         System.out.println(Arrays.toString(countSort(arr)));
 
     }
