@@ -7,6 +7,11 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
+
+        String s = "Sahed";
+        s= "sa";
+        System.out.println(s);
+
 //        Map<String, Integer> map = new HashMap<>();
 //
 //        map.put("A", 1);
