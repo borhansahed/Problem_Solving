@@ -47,8 +47,6 @@ public class Radix {
             output[--count[(arr[i] / pos) % 10 ]] = arr[i];
         }
 
-        for(int i = 0; i<output.length; i++){
-            arr[i] = output[i];
-        }
+        System.arraycopy(output, 0, arr, 0, output.length);
     }
 }
